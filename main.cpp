@@ -1,11 +1,11 @@
 #include <opencv2/highgui/highgui.hpp>
-#include <opencv/img/proc/imgproc.hpp>
+#include <opencv2/imgproc.hpp>
 
 int main(int argc, char** argv) {
 
   cv::namedWindow("Video - Open", cv::WINDOW_AUTOSIZE);
   cv::VideoCapture cap;
-  cap.open(string(argv[1]);
+  cap.open(std::string(argv[1]));
   cv::Mat frame;
   for (;;){
     cap >> frame;
